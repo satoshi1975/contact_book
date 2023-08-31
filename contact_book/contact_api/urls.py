@@ -5,7 +5,7 @@ from .views import (ContactListCreateView, ContactRetrieveUpdateDeleteView,
 
 urlpatterns = [
     path('contacts/', ContactListCreateView.as_view(),
-         name='contact-list'),  # вывод всех контактов
+         name='contact-list'),  # вывод всех контактов и создание контакта
     path('contacts/<int:pk>/', ContactRetrieveUpdateDeleteView.as_view(),  # вывод, изменение, удаление контакта по id
          name='contact-detail'),
     path('contacts/search/name/', ContactSearchByNameView.as_view(),  # поиск контактов по имени
